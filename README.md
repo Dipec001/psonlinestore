@@ -236,6 +236,15 @@
 ```
 "detail": "Supplier has been deleted successfully."
 ```
+### Error Handling
+
+The API may return error messages with appropriate HTTP status codes in case of invalid requests or data issues. Here are some common examples:
+
+* **400 Bad Request:** This indicates a malformed request, such as missing required fields or invalid data formats.
+* **404 Not Found:** This occurs when trying to access a resource (inventory item or supplier) that doesn't exist.
+* **500 Internal Server Error:** This is a generic error for unexpected server-side issues.
+
+The specific error message will provide more details about the problem encountered.
 ### Known Limitations
 
 This API does not include authentication or authorization mechanisms. It assumes open access.
