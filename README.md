@@ -85,7 +85,7 @@
 ### Get An Inventory Item
 **Endpoint**: 
 ```
-/api/inventory/id/
+/api/inventory/{id}/
 ```
 **HTTP Method**: GET
 **Description**: Retrieve a specific inventory item
@@ -106,7 +106,7 @@
 ### Edit an inventory item
 **Endpoint**: 
 ```
-/api/inventory/1/
+/api/inventory/{id}/
 ```
 **HTTP Method**: PATCH
 **Description**:  This updates a specific inventory item
@@ -133,7 +133,7 @@
 ### Delete an inventory item
 **Endpoint**: 
 ```
-/api/inventory/1/
+/api/inventory/{id}/
 ```
 **HTTP Method**: DEL
 **Description**:  This deletes a specific inventory item
