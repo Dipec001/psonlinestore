@@ -17,7 +17,7 @@
    ```
    python manage.py runserver
    ```
-##API Endpoints
+## API Endpoints
 
 ### List all inventory items
 **Endpoint**:
@@ -60,6 +60,15 @@
 ```
 **HTTP Method**: POST
 **Description**: This creates a new inventory item.
+**Request**: Example request body includes;
+```
+{
+    "name": "Nanny ",
+    "description": "This is a woman for infants.",
+    "price": 40000.00,
+    "suppliers": [1, 3]
+}
+```
 **Response**: Upon successful creation of the inventory item, the API will respond with a status code of 201 and a JSON object representing the newly created inventory item. An example response will have the following schema:
 ```
 {
@@ -102,6 +111,12 @@
 ```
 **HTTP Method**: PATCH
 **Description**:  This updates a specific inventory item
+**Request**: Example request body includes;
+```
+{
+    "description": "This is a milk for children.",
+}
+```
 **Response**: the API will respond with a status code of 200 and a JSON object representing the updated inventory item. An example response will have the following schema:
 ```
 {
@@ -158,6 +173,13 @@
 ```
 **HTTP Method**: POST
 **Description**: This creates a new supplier.
+**Request**: Example request body includes;
+```
+{
+  "name": "Chukwu ekene",
+  "contact_info": "08059771695"
+}
+```
 **Response**: Upon successful creation of the supplier, the API will respond with a status code of 201 and a JSON object representing the newly created inventory item. An example response will have the following schema:
 ```
 {
@@ -184,10 +206,17 @@
 ### Edit an supplier
 **Endpoint**: 
 ```
-/api/suppliers/1/
+/api/suppliers/{id}/
 ```
 **HTTP Method**: PATCH
 **Description**:  This updates a specific supplier
+**Request**: Example request body includes;
+```
+{
+  "name": "Chukwudi Emeka",
+  "contact_info": "08059771695"
+}
+```
 **Response**: the API will respond with a status code of 200 and a JSON object representing the updated inventory item. An example response will have the following schema:
 ```
 {
@@ -200,7 +229,7 @@
 ### Delete a specific Supplier
 **Endpoint**: 
 ```
-/api/suppliers/1/
+/api/suppliers/{id}/
 ```
 **HTTP Method**: DEL
 **Description**:  This deletes a supplier
