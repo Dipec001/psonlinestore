@@ -1,4 +1,3 @@
-# psonlinestore
 # Online Store Inventory and Supplier Management API
 
 ## Setup
