@@ -23,8 +23,8 @@
 ```
 /api/inventory/
 ```
-**HTTP Method**: GET
-**Description**: Retrieve a list of all inventory items available in the system.
+**HTTP Method**: GET <br>
+**Description**: Retrieve a list of all inventory items available in the system.<br>
 **Response**: JSON array of inventory objects with their details, including id, name, description, price, date added and suppliers. An example is as shown:
 
 ```
@@ -57,8 +57,8 @@
 ```
 /api/inventory/
 ```
-**HTTP Method**: POST
-**Description**: This creates a new inventory item.
+**HTTP Method**: POST <br>
+**Description**: This creates a new inventory item. <br>
 **Request**: Example request body includes;
 ```
 {
@@ -87,8 +87,8 @@
 ```
 /api/inventory/{id}/
 ```
-**HTTP Method**: GET
-**Description**: Retrieve a specific inventory item
+**HTTP Method**: GET <br>
+**Description**: Retrieve a specific inventory item. <br>
 **Response**: The response returned is a JSON object with an example schema as follows:
 ```
 {
@@ -108,8 +108,8 @@
 ```
 /api/inventory/{id}/
 ```
-**HTTP Method**: PATCH
-**Description**:  This updates a specific inventory item
+**HTTP Method**: PATCH <br>
+**Description**:  This updates a specific inventory item. <br>
 **Request**: Example request body includes;
 ```
 {
@@ -135,8 +135,8 @@
 ```
 /api/inventory/{id}/
 ```
-**HTTP Method**: DEL
-**Description**:  This deletes a specific inventory item
+**HTTP Method**: DEL <br>
+**Description**:  This deletes a specific inventory item. <br>
 **Response**: the API will respond with a sucess message. An example response will have the following schema:
 ```
 "detail": "Inventory item has been deleted successfully."
@@ -146,8 +146,8 @@
 ```
 /api/suppliers/
 ```
-**HTTP Method**: GET
-**Description**: Retrieve a list of all suppliers available in the system.
+**HTTP Method**: GET <br>
+**Description**: Retrieve a list of all suppliers available in the system. <br>
 **Response**: JSON array of inventory objects with their details, including id, name and contact info. An example is as shown:
 
 ```
@@ -170,7 +170,7 @@
 ```
 /api/suppliers/
 ```
-**HTTP Method**: POST
+**HTTP Method**: POST <br>
 **Description**: This creates a new supplier.
 **Request**: Example request body includes;
 ```
@@ -192,8 +192,8 @@
 ```
 /api/suppliers/{id}/
 ```
-**HTTP Method**: GET
-**Description**: This retrieves a specific Supplier
+**HTTP Method**: GET <br>
+**Description**: This retrieves a specific Supplier. <br>
 **Response**: The response returned is a JSON object with an example schema as follows:
 ```
 {
@@ -207,8 +207,8 @@
 ```
 /api/suppliers/{id}/
 ```
-**HTTP Method**: PATCH
-**Description**:  This updates a specific supplier
+**HTTP Method**: PATCH <br>
+**Description**:  This updates a specific supplier. <br>
 **Request**: Example request body includes;
 ```
 {
@@ -230,8 +230,8 @@
 ```
 /api/suppliers/{id}/
 ```
-**HTTP Method**: DEL
-**Description**:  This deletes a supplier
+**HTTP Method**: DEL <br>
+**Description**:  This deletes a supplier. <br>
 **Response**: the API will respond with a success message. An example response will have the following schema:
 ```
 "detail": "Supplier has been deleted successfully."
