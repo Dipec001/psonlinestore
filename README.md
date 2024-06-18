@@ -148,7 +148,7 @@
 ```
 **HTTP Method**: GET <br>
 **Description**: Retrieve a list of all suppliers available in the system. <br>
-**Response**: JSON array of inventory objects with their details, including id, name and contact info. An example is as shown:
+**Response**: JSON array of suppliers objects with their details, including id, name and contact info. An example is as shown:
 
 ```
 [
@@ -235,6 +235,64 @@
 **Response**: the API will respond with a success message. An example response will have the following schema:
 ```
 "detail": "Supplier has been deleted successfully."
+```
+### List all suppliers associated with an Inventory Item
+**Endpoint**: 
+```
+/api/inventory/<int:item_id>/suppliers/
+```
+**HTTP Method**: GET <br>
+**Description**: Retrieve a list of all suppliers available associated with a particular item whose item id is specified in the URL. <br>
+**Response**: JSON array of supplier objects with their details, including id, name and contact info. An example is as shown:
+
+```
+[
+    {
+        "id": 1,
+        "name": "Divine Pascal",
+        "contact_info": "08147250442"
+    },
+    {
+        "id": 2,
+        "name": "Chukwu ekene",
+        "contact_info": "08059771695"
+    }
+]
+```
+
+### List all Inventory items provided by a supplier
+**Endpoint**: 
+```
+/api/suppliers/<int:supplier_id>/items/
+```
+**HTTP Method**: GET <br>
+**Description**: Retrieve a list of all inventory items provided  by a supplier whose item id is specified in the URL. <br>
+**Response**: JSON array of inventory objects with their details. An example is as shown:
+
+```
+[
+    {
+        "id": 3,
+        "suppliers": [
+            1
+        ],
+        "name": "Nanny",
+        "description": "This is a woman for infants.",
+        "price": "40000.00",
+        "date_added": "2024-06-17"
+    },
+    {
+        "id": 4,
+        "suppliers": [
+            1,
+            3
+        ],
+        "name": "Nanny",
+        "description": "This is a woman for infants.",
+        "price": "40000.00",
+        "date_added": "2024-06-17"
+    }
+]
 ```
 ### Error Handling
 
